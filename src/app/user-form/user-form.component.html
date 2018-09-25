@@ -1,0 +1,17 @@
+<fieldset>
+  <legend>Github Score</legend>
+  <form (submit)="onSubmit()" #form="ngForm">
+    <div>
+      <label for="user">Github Username</label>
+      <input
+        type="text"
+        id="user"
+        name="user"
+        required
+        [(ngModel)]="user.login"
+        #login="ngModel"
+      >
+    </div>
+    <button [disabled]="form.invalid">Calculate My Github Score</button>
+  </form>
+</fieldset>
