@@ -11,13 +11,14 @@ export class UserFormComponent implements OnInit {
 
   user: GithubUser = new GithubUser();
 
-  constructor(private gihubUserService: GithubUserService) { }
+  constructor(private githubUserService: GithubUserService) { }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    console.log(this.user.login);
+    console.log(this.user);
+    this.githubUserService.retrieveGithubUser(this.user);
     this.user = new GithubUser;
   }
 

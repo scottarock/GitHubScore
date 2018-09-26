@@ -1,3 +1,10 @@
-<p>
-  user-details works!
-</p>
+<div *ngIf="user.id" class="details">
+  <h1>{{ user.login }}'s Score: {{ score }}</h1>
+  <p
+    [ngStyle]="{
+      'color': color
+    }"
+  >
+    {{ message }}
+  </p>
+</div>
